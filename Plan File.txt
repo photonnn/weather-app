@@ -1,0 +1,17 @@
+This is a basic weather app. The reason for that is the limitation of the 
+OpenWeather API that is going to be utilised. As I'm going to be using a free
+plan I won't bother with security the API key as it is publicly available. 
+
+Outline:
+1. Make the API work
+2. Process the data and output it
+3. Add a basic form to allow use to search a location and then output data
+  below
+4. Come up with a design
+5. Make the website
+6. Add more features as need be
+
+
+Development:
+1. This is quite simple. Goal is to get data from the API and output it to 
+  console. Nothing fancy, just a simple promise

@@ -1,5 +1,5 @@
 This is a basic weather app. The reason for that is the limitation of the 
-OpenWeather API that is going to be utilised. As I'm going to be using a free
+OpenWeatherMap API that is going to be utilised. As I'm going to be using a free
 plan I won't bother with security the API key as it is publicly available. 
 
 Outline:
@@ -14,4 +14,20 @@ Outline:
 
 Development:
 1. This is quite simple. Goal is to get data from the API and output it to 
-  console. Nothing fancy, just a simple promise
+  console. Nothing fancy, just simple chain of promises.
+
+2. Here comes the part when I have to decide what data is useful.
+
+  Checklist:
+  - Wind: km/h
+  - Weather: main (clouds) + description (ex. "scattered clouds")
+  - Temperature in Kelvin
+  - Humidity in %
+  - 'Feels like' in Kelvin
+  - Pressure in mb
+  - Timezone, 3600 = GMT+1
+              -18000 = GMT-5
+
+I roughly imagine design, which is mobile-first. At the top there is city name,
+below time and temperature. other information is below in table like format, 
+that is property (wind) on the left and value (4.2km/h) on the right.

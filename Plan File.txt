@@ -31,3 +31,11 @@ Development:
 I roughly imagine design, which is mobile-first. At the top there is city name,
 below time and temperature. other information is below in table like format, 
 that is property (wind) on the left and value (4.2km/h) on the right.
+
+3. I've made a seperate module and made a table for all the information that 
+  we are outputting. It works perfectly well now. Input city and get weather.
+  However, ... .... .... ..., I realised that OpeanWeatherAPI isn't that useless
+  I can actually get the forecast data O,O. I though basic weather info was all
+  that I could get o,O. Turns out I have to go back to step 2. I have to rethink
+  of a way to make mobile design fit the forecast as well. Even more there are
+  actually weather maps that you can use.

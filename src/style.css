@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: yellow;
+  background-color: rgb(158, 152, 152);
 }
 
 html,
@@ -48,9 +48,6 @@ form button,
   cursor: pointer;
 }
 
-.back {
-  margin-top: 8vh;
-}
 table > * {
   font-size: 5vh;
 }
@@ -58,4 +55,89 @@ table > * {
 .changeUnit {
   width: 10vh;
   font-size: 3vh;
+  margin-bottom: 3vh;
+}
+
+.display {
+  display: none;
+  flex-direction: column;
+  height: 100vh;
+  width: min(100%, 800px);
+  font-size: 3vh;
+  overflow: auto;
+}
+
+.display > div > * {
+  display: flex;
+  justify-content: center;
+}
+
+.header, .footer {
+  width: 100%;
+  flex: 1;
+}
+
+.cards {
+  flex: 5;
+  width: 100%;
+  overflow: auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  top: 0;
+}
+
+.footer {
+  max-height: 10vh;
+  bottom: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer button {
+  height: 100%;
+  width: 25vw;
+  font-size: 6vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#date {
+  border: none;
+  outline: none;
+}
+
+.row3 > p {
+  display: flex;
+  margin-left: 50px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border: black 1px solid;
+}
+
+/* card rows*/
+.card > * {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card > * > * {
+  width: 50%;
+}
+
+.card > *:first-child {
+  display: flex;
+  justify-content: center;
+}
+
+.cardRow1 {
+  color: rgb(136, 20, 20);
+  font-weight: bold;
 }

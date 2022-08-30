@@ -13,17 +13,18 @@ function fixTimezone(timezone) {
 }
 
 // eslint-disable-next-line import/prefer-default-export
-export function filterData(data, unit) {
+export function filterData(data, unit, i = 0) {
   const weather = {};
-  weather.Country = data.sys.country;
-  weather.City = data.name;
-  weather.Timezone = fixTimezone(data.timezone);
-  weather.Temperature = kelvinToUnit(data.main.temp, unit);
-  weather["Feels like"] = kelvinToUnit(data.main.feels_like, unit);
-  weather.Weather = data.weather[0].main;
-  weather.Description = data.weather[0].description;
-  weather.Wind = `${data.wind.speed} km/h`;
-  weather.Humidity = `${data.main.humidity}%`;
-  weather.Pressure = `${data.main.pressure} mb`;
+  weather.Country = data.city.country;
+  weather.City = data.city.name;
+  weather.Timezone = fixTimezone(data.city.timezone);
+  weather.Temperature = kelvinToUnit(data.list[i].main.temp, unit);
+  weather["Feels like"] = kelvinToUnit(data.list[i].main.feels_like, unit);
+  weather.Weather = data.list[i].weather[0].main;
+  weather.Description = data.list[i].weather[0].description;
+  weather.Wind = `${data.list[i].wind.speed} km/h`;
+  weather.Humidity = `${data.list[i].main.humidity}%`;
+  weather.Pressure = `${data.list[i].main.pressure} mb`;
+  weather.Time = `${data.list[i].dt_txt}`;
   return weather;
 }

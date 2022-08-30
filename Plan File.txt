@@ -49,3 +49,8 @@ that is property (wind) on the left and value (4.2km/h) on the right.
   likely have to include the mph instead of kph button as well. Also an actual 
   form pop-up to display or just a simple message for an error instead of alert 
   would be great.
+
+3.1 Basic app is finished. You can display weather information about any city 
+  that you'd like. The way forward now is to make use of the API to get more 
+  info. I will make use of the every 3-hour forecast that shows for the next 5
+  days. 

@@ -39,3 +39,7 @@ that is property (wind) on the left and value (4.2km/h) on the right.
   that I could get o,O. Turns out I have to go back to step 2. I have to rethink
   of a way to make mobile design fit the forecast as well. Even more there are
   actually weather maps that you can use.
+
+  For now, I think that the way to go, is to first finish this "basic" app. For
+  starters that means making a button to switch from degres to fahrenheit. The 
+  easier way to do it would be to simply include it next to the search button.

@@ -40,7 +40,8 @@ form input {
 }
 
 form button,
-.back {
+.back,
+.changeUnit {
   font-size: 6vh;
   width: 40vw;
   background-color: whitesmoke;
@@ -52,4 +53,9 @@ form button,
 }
 table > * {
   font-size: 5vh;
+}
+
+.changeUnit {
+  width: 10vh;
+  font-size: 3vh;
 }

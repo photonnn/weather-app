@@ -43,3 +43,9 @@ that is property (wind) on the left and value (4.2km/h) on the right.
   For now, I think that the way to go, is to first finish this "basic" app. For
   starters that means making a button to switch from degres to fahrenheit. The 
   easier way to do it would be to simply include it next to the search button.
+
+  It turned out that the easiest way to do change is simply by creating a new 
+  button just like the back button and then remove it after finished. I will 
+  likely have to include the mph instead of kph button as well. Also an actual 
+  form pop-up to display or just a simple message for an error instead of alert 
+  would be great.

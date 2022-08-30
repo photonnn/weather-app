@@ -1,6 +1,5 @@
 import "./style.css";
 import changeBody from "./display";
-import { filterData } from "./utility";
 
 async function getData(location) {
   const response = await fetch(
@@ -22,12 +21,17 @@ async function getMoreData() {
 const submit = document.querySelector("button");
 submit.addEventListener("click", () => {
   const input = document.getElementById("city").value;
-  try {
-    const data = getData(input);
-    data.then((weatherData) => {
+  const data = getData(input);
+  data
+    .then((weatherData) => {
+      if (weatherData.cod === "404") {
+        throw new Error("404: not found");
+      } else if (weatherData.cod === "400") {
+        throw new Error("400: nothing to search");
+      }
       changeBody(weatherData);
+    })
+    .catch((err) => {
+      alert(err);
     });
-  } catch (e) {
-    alert("ERROR", e);
-  }
 });

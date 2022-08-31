@@ -2,7 +2,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: rgb(158, 152, 152);
+  background-color: var(--yellow);
+  --green: #6dd47e;
+  --yellow: #ffd55a;
+  --blue: #1c0b7a;
 }
 
 html,
@@ -36,7 +39,11 @@ form input {
   width: min(90vw, 800px);
   height: 5vh;
   font-size: 4vh;
-  background-color: whitesmoke;
+  background-color: var(--green);
+}
+
+form input::placeholder {
+  color: rgba(0, 0, 0, 0.541);
 }
 
 form button,
@@ -44,7 +51,7 @@ form button,
 .changeUnit {
   font-size: 6vh;
   width: 40vw;
-  background-color: whitesmoke;
+  background-color: var(--green);
   cursor: pointer;
 }
 
@@ -101,7 +108,7 @@ table > * {
   height: 100%;
   width: 25vw;
   font-size: 6vh;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
 }
@@ -109,6 +116,11 @@ table > * {
 #date {
   border: none;
   outline: none;
+  cursor: pointer;
+}
+
+.left, .right {
+  cursor: pointer;
 }
 
 .row3 > p {
@@ -138,6 +150,6 @@ table > * {
 }
 
 .cardRow1 {
-  color: rgb(136, 20, 20);
+  color: var(--blue);
   font-weight: bold;
 }

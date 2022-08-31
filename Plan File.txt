@@ -54,3 +54,16 @@ that is property (wind) on the left and value (4.2km/h) on the right.
   that you'd like. The way forward now is to make use of the API to get more 
   info. I will make use of the every 3-hour forecast that shows for the next 5
   days. 
+
+  Done with the basics. Also added the conversion to miles per hour. Did a lot 
+  of refacturing the code. Most critically I decided to create buttons in html 
+  not in javascript. Due to creating button in the changeBody function and 
+  removing them in the resetTable function I got into the dependecy cycle when
+  I tried to put listeners in a seperate function, because the listner calls 
+  the changeBody to "refresh" data. It wouldn't be a problem if changeBody 
+  wasn't the most foundational function as it is directly called from the
+  promise.
+
+  There is still a big problem with the design. For now I changed colors to 
+  green, blue and yellow. I believe it to be more pleasing than white, grey and 
+  dried red;

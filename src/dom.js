@@ -5,6 +5,7 @@ export function createOneTimeDom(tempWeatherData) {
   const city = document.createElement("p");
   const countryCode = document.createElement("p");
   const timezone = document.createElement("p");
+  city.classList.add("city");
   city.textContent = tempWeatherData.City;
   countryCode.textContent = tempWeatherData.Country;
   timezone.textContent = tempWeatherData.Timezone;

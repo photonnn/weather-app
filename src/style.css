@@ -36,7 +36,7 @@ form > p {
 }
 
 form input {
-  width: min(90vw, 800px);
+  width: max(300px, 50vw);
   height: 5vh;
   font-size: 4vh;
   background-color: var(--green);
@@ -50,7 +50,7 @@ form button,
 .back,
 .changeUnit {
   font-size: 6vh;
-  width: 40vw;
+  width: max(150px, 20vw);
   background-color: var(--green);
   cursor: pointer;
 }
@@ -79,7 +79,8 @@ table > * {
   justify-content: center;
 }
 
-.header, .footer {
+.header,
+.footer {
   width: 100%;
   flex: 1;
 }
@@ -92,9 +93,11 @@ table > * {
 
 .header {
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
   align-items: center;
   top: 0;
+  user-select: none;
 }
 
 .footer {
@@ -106,7 +109,7 @@ table > * {
 
 .footer button {
   height: 100%;
-  width: 25vw;
+  width: 30vw;
   font-size: 6vh;
   display: none;
   justify-content: center;
@@ -119,7 +122,25 @@ table > * {
   cursor: pointer;
 }
 
-.left, .right {
+input#date,
+.left,
+.right {
+  font-size: 4vh;
+}
+
+.left,
+.right {
+  font-weight: bolder;
+}
+
+.date {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left,
+.right {
   cursor: pointer;
 }
 
@@ -152,4 +173,32 @@ table > * {
 .cardRow1 {
   color: var(--blue);
   font-weight: bold;
+}
+
+@media only screen and (min-width: 800px) {
+  .display {
+    width: 100%;
+  }
+
+  .cardRow1 {
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+  }
+
+  .card > * > * {
+    width: 100%;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-rows: repeat(auto-fit, minmax(18vh, 1fr));
+    grid-gap: 5vh;
+  }
+
+  .header {
+    flex-direction: row;
+  }
 }

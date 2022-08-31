@@ -62,6 +62,6 @@ right.addEventListener("click", () => {
   changeBody(utilityObj.weather, utilityObj.unit);
 });
 // date is picked manually from the calander, click doesn't work
-date.addEventListener("change", (e) => {
+date.addEventListener("click", (e) => {
   e.preventDefault();
 });

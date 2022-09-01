@@ -66,4 +66,7 @@ that is property (wind) on the left and value (4.2km/h) on the right.
 
   There is still a big problem with the design. For now I changed colors to 
   green, blue and yellow. I believe it to be more pleasing than white, grey and 
-  dried red;
+  dried red. 
+
+  Only thing left now is to fix the date to not allow use to get past the 
+  available forecast

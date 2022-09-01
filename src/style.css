@@ -39,7 +39,7 @@ form input {
   width: max(300px, 50vw);
   height: 5vh;
   font-size: 4vh;
-  background-color: var(--green);
+  background-color: whitesmoke;
 }
 
 form input::placeholder {
